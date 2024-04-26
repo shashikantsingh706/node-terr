@@ -16,8 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     environment: dev
     steps:
-     - name: checkout
-       uses: actions/checkout@v3  
+      - name: checkout
+        uses: actions/checkout@v3  
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -52,7 +52,7 @@ jobs:
   terraform:
     name: Verify terraform
     runs-on: ubuntu_latest
-    #needs: [deploy]
+    needs: [deploy]
     environment: dev
     steps:
       - name: checkout
