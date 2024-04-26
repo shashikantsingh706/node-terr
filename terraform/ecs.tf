@@ -42,6 +42,6 @@ resource "aws_ecs_task_definition" "td" {
   cpu                = "256"
   memory             = "512"
   network_mode       = "awsvpc"
-  task_role_arn      = "arn:aws:iam::891377310564:role/ecsTaskExecutionRole"
-  execution_role_arn = "arn:aws:iam::891377310564:role/ecsTaskExecutionRole"
+  task_role_arn      = "arn:aws:iam::891377310654:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS"
+  execution_role_arn = "arn:aws:iam::891377310654:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS"
 }
