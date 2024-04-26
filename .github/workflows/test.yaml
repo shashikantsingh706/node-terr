@@ -1,4 +1,4 @@
-name: Deploy to Amazon ECS
+name: test to Deploy to Amazon ECS
 on:
   pull_request:
     branches:
