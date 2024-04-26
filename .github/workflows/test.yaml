@@ -51,7 +51,7 @@ jobs:
 
   terraform:
     name: Verify terraform
-    run_on: ubuntu_latest
+    runs_on: ubuntu_latest
     needs: [deploy]
     steps:
       - uses: actions/checkout@v2
