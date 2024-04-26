@@ -1,7 +1,7 @@
 resource "aws_ecs_cluster" "ecs" {
   name = "app_cluster"
 }
-
+#test
 resource "aws_ecs_service" "service" {
   name = "app_service"
   cluster                = aws_ecs_cluster.ecs.arn
