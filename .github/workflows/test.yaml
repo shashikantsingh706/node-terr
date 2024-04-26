@@ -55,8 +55,7 @@ jobs:
     needs: [deploy]
     environment: dev
     steps:
-      - name: checkout
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -64,6 +63,14 @@ jobs:
           aws-access-key-id: ${{secrets.AWS_USER_KEY}}
           aws-secret-access-key: ${{secrets.AWS_USER_SECRET_KEY}}
           aws-region: "us-east-1"
+
+      - name: Configure AWS profile
+        uses: Fooji/create-aws-profile-action@v1
+        with:
+          profile: default
+          region: us-east-1
+          key:  ${{secrets.AWS_USER_KEY}}
+          secret:  ${{secrets.AWS_USER_SECRET_KEY}}
 
       - name: verifciation of terraform code
         run: |
