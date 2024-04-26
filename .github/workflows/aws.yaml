@@ -45,7 +45,7 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     environment: dev
-    needs: [deploy]
+    needs: [terraform]
     steps:
       - name: Checkout
         uses: actions/checkout@v3
