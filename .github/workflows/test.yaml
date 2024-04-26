@@ -1,6 +1,6 @@
 name: Deploy to Amazon ECS
 on:
-  pull:
+  pull_request:
     branches:
       - master
 env:
