@@ -16,3 +16,11 @@ provider "aws" {
   region     = "us-east-1"
   profile    = "default"
 }
+
+terraform {
+  backend "s3" {
+    bucket = "ecs-terraform-st"
+    key    = "terraform_state/ecs-terraform-first/terraform.tfstate"
+    region = "us-east-1"
+  }
+}
