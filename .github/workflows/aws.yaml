@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+#test
 env:
   AWS_REGION: us-east-1
   ECS_CLUSTER: app_cluster
