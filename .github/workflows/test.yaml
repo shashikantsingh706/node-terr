@@ -9,7 +9,7 @@ env:
   CONTAINER_NAME: app
   ECS_SERVICE: app_service
   ECS_TD: .github/workflows/td.json
-
+#test
 jobs:
   deploy:
     name: Deploy
@@ -78,4 +78,5 @@ jobs:
            terraform fmt
            terraform init
            terraform plan
+           
            
