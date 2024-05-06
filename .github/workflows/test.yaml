@@ -78,5 +78,5 @@ jobs:
            terraform fmt
            terraform init
            terraform plan
-           terraform destroy --auto-approve
+           
            

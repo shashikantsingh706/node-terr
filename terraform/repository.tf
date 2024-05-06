@@ -5,11 +5,14 @@ resource "aws_ecr_repository" "repo" {
   image_scanning_configuration {
     scan_on_push = true
   }
+}
 
-# Resource-based policy granting access to the IAM user
- policy = jsonencode({
-  Version = "2008-10-17"
-  Statement = [
+resource "aws_ecr_repository_policy" "repo_policy" {
+  repository = aws_ecr_repository.repo.name
+
+  policy = jsonencode({
+    Version = "2008-10-17"
+    Statement = [
       {
         Effect    = "Allow",
         Principal = {
@@ -21,5 +24,3 @@ resource "aws_ecr_repository" "repo" {
     ]
   })
 }
-
-
