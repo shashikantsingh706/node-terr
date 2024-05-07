@@ -1,8 +1,9 @@
 name: test to Deploy to Amazon ECS
 on:
-  pull_request:
-    branches:
-      - master
+  workflow_dispatch
+#  pull_request:
+#    branches:
+#      - master
 env:
   AWS_REGION: us-east-1
   ECS_CLUSTER: app_cluster
@@ -78,8 +79,5 @@ jobs:
            terraform fmt
            terraform init
            terraform plan
-  
-           
-           
            
            
