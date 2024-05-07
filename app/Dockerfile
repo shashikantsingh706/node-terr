@@ -2,7 +2,7 @@ FROM node:19.6
 
 WORKDIR /app
 
-COPY app/package*.json ./
-RUN npm install
+COPY /app/package*.json ./
 COPY .. ./
-CMD node index.js
+RUN npm install
+CMD ["node", "app/index.js"]
