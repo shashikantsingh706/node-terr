@@ -12,7 +12,7 @@ terraform {
 
   backend "s3" {
     bucket = "ecs-terraform-st"
-    key    = "terraform_state/ecs-terraform-first/terraform.tfstate"
+    key    = "terraform_state/ecs-terraform-second/terraform.tfstate"
     region = "us-east-1"
  }
 }
