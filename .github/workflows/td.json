@@ -16,7 +16,16 @@
         "essential": true,
         "environment": [],
         "mountPoints": [],
-        "volumesFrom": []
+        "volumesFrom": [],
+        "logConfiguration": {
+          "logDriver": "awslogs",
+          "options": {
+            "awslogs-create-group": "true",
+            "awslogs-region": "us-east-1",
+            "awslogs-group": "ecs-node-app",
+            "awslogs-stream-prefix": "ecs-node-app-stream"
+          }
+            }
       }
     ],
     "family": "app",
@@ -42,15 +51,7 @@
         "name": "ecs.capability.task-eni"
       }
     ],
-    "logConfiguration": {
-      "logDriver": "awslogs",
-      "options": {
-        "awslogs-create-group": "true",
-        "awslogs-region": "us-east-1",
-        "awslogs-group": "ecs-node-app",
-        "awslogs-stream-prefix": "ecs-node-app-stream"
-      }
-        },
+
     "placementConstraints": [],
     "compatibilities": [
       "EC2",
