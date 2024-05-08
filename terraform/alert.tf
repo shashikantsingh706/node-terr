@@ -13,7 +13,7 @@ resource "aws_cloudwatch_event_rule" "ecs_task_failure_rule" {
   "source": ["aws.ecs"],
   "detail-type": ["ECS Task State Change"],
   "detail": {
-    "lastStatus": ["STOPPED", "FAILED", "DELETED"]
+    "lastStatus": ["STOPPED"]
   }
 }
 PATTERN
