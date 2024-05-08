@@ -29,6 +29,8 @@
       }
     ],
     "family": "app",
+    "taskRoleArn": "arn:aws:iam::891377310654:role/node_app_Role",
+    "executionRoleArn": "arn:aws:iam::891377310654:role/node_app_Role",
     "networkMode": "awsvpc",
     "volumes": [],
     "status": "ACTIVE",
